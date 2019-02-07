@@ -41,7 +41,7 @@ Contributors:
 #  include <ares.h>
 #endif
 
-#ifdef WIN32
+#if defined(WIN32) && !defined(__MINGW32__)
 #	if _MSC_VER < 1600
 		typedef unsigned char uint8_t;
 		typedef unsigned short uint16_t;

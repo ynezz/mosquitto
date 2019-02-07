@@ -20,7 +20,9 @@ Contributors:
 #include <unistd.h>
 #else
 #include <winsock2.h>
+#ifndef __MINGW32__
 typedef SSIZE_T ssize_t;
+#endif
 #endif
 
 #include "mosquitto_internal.h"
